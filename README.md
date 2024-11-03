@@ -1,2 +1,2 @@
 # varundemo
-My first Gig repository.
+My first Git repository.
