@@ -1,0 +1,149 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Order Interaction - SwiftWork!
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100">
+  <header class="bg-blue-600 shadow-md">
+   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a class="text-2xl font-bold text-white flex items-center" href="#">
+     <img alt="SwiftWork! logo with a sleek and modern design, featuring a stylized briefcase icon next to the text 'SwiftWork!'" class="h-8 w-8 mr-2" src="https://storage.googleapis.com/a1aa/image/g3qBykI9KvYOBZHYfLDKBpT3qUmfU6Hb2WfciHnPaDEXNxtnA.jpg"/>
+     SwiftWork!
+    </a>
+    <nav class="space-x-4">
+     <a class="text-white hover:text-gray-200" href="/">
+      Home
+     </a>
+     <a class="text-white hover:text-gray-200" href="/login">
+      Login
+     </a>
+     <a class="text-white hover:text-gray-200" href="/signup">
+      Sign Up
+     </a>
+    </nav>
+   </div>
+  </header>
+  <!-- Order Interaction Page -->
+  <section class="py-20">
+   <div class="container mx-auto px-4">
+    <div class="bg-white p-8 rounded-lg shadow-md">
+     <h2 class="text-3xl font-bold mb-4">
+      Order Interaction
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+       <h3 class="text-2xl font-bold mb-4">
+        Messages
+       </h3>
+       <div class="bg-gray-100 p-4 rounded-lg h-96 overflow-y-scroll">
+        <div class="mb-4">
+         <div class="flex items-start mb-2">
+          <img alt="Profile picture of the sender" class="w-10 h-10 rounded-full mr-4" height="40" src="https://storage.googleapis.com/a1aa/image/RCZDnT7ntyKeGSc6pwHG6Ib8mujMHfhLvFQWnbJTEWKfIxtnA.jpg" width="40"/>
+          <div>
+           <p class="text-gray-700">
+            <strong>
+             Freelancer:
+            </strong>
+            Message content from the freelancer.
+           </p>
+           <p class="text-gray-500 text-sm">
+            10:30 AM, Today
+           </p>
+          </div>
+         </div>
+         <div class="flex items-start mb-2">
+          <img alt="Profile picture of the sender" class="w-10 h-10 rounded-full mr-4" height="40" src="https://storage.googleapis.com/a1aa/image/RCZDnT7ntyKeGSc6pwHG6Ib8mujMHfhLvFQWnbJTEWKfIxtnA.jpg" width="40"/>
+          <div>
+           <p class="text-gray-700">
+            <strong>
+             Client:
+            </strong>
+            Message content from the client.
+           </p>
+           <p class="text-gray-500 text-sm">
+            10:32 AM, Today
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+       <form action="/api/v1/messages" class="mt-4" method="POST" enctype="multipart/form-data">
+        <div class="mb-4">
+         <label class="block text-gray-700" for="message">
+          Message
+         </label>
+         <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" id="message" name="content" required="">
+         </textarea>
+        </div>
+        <div class="mb-4">
+         <label class="block text-gray-700" for="attachments">
+          Attachments
+         </label>
+         <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" id="attachments" name="attachments" type="file"/>
+        </div>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700" type="submit">
+         Send
+        </button>
+       </form>
+      </div>
+      <div>
+       <h3 class="text-2xl font-bold mb-4">
+        Shared Files
+       </h3>
+       <div class="bg-gray-100 p-4 rounded-lg h-96 overflow-y-scroll">
+        <div class="mb-4">
+         <div class="flex items-center mb-2">
+          <i class="fas fa-file-alt text-gray-700 text-2xl mr-4">
+          </i>
+          <div>
+           <p class="text-gray-700">
+            <a class="text-blue-600 hover:underline" href="#">
+             File1.pdf
+            </a>
+           </p>
+           <p class="text-gray-500 text-sm">
+            Uploaded by Freelancer
+           </p>
+          </div>
+         </div>
+         <div class="flex items-center mb-2">
+          <i class="fas fa-file-alt text-gray-700 text-2xl mr-4">
+          </i>
+          <div>
+           <p class="text-gray-700">
+            <a class="text-blue-600 hover:underline" href="#">
+             File2.docx
+            </a>
+           </p>
+           <p class="text-gray-500 text-sm">
+            Uploaded by Client
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="bg-black text-white py-6">
+   <div class="container mx-auto px-4 text-center">
+    <p>
+     © 2023 SwiftWork! All rights reserved.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
